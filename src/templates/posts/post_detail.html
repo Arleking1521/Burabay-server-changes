@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load i18n%}
+{% block content %}
+<div class="content-inner">
+    <div class="new-frame">
+        <h1 class="fame-header">{{post.title}}</h1>
+        <p style="font-weight: 300; font-size: 15px;">{%trans 'Опубликовано'%}: <b>{{post.author.name}}</b></p>
+        <p class="big_content">{{post.content}}</p>
+        {% for att in attachments %}
+        {% if att.type == 'img' %}
+            <div class="big_pic">
+                <img src="/media/{{att.file}}" alt="" width="100%">
+            </div>
+        {% else %}
+            <div class="documents">
+                <iframe src="/media/{{att.file}}"></iframe>
+            </div>
+        {% endif %}
+        {% endfor %}
+        <p class="date mg-b">{{post.date}}</p>
+    </div>
+    <div class="comments">
+    {% for comms in comments %}
+        <div class="comment-card">
+            <p class="comment-username">{{comms.author}}</p>
+            <p class="comment-time">{{comms.time_stamp}}</p>
+            <p class="comment-body">{{comms.content}}</p> 
+        </div>
+        {% endfor %}
+    </div>
+</div> 
+{% endblock %}

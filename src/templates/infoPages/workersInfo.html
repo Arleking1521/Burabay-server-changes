@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load  i18n %}
+<div class="content-split">
+    <div class="navigation">
+        <a href="{% url 'viewSovet'%}">{% trans 'Наблюдательный совет' %}</a>
+        <a href="{% url 'histories'%}">{% trans 'История' %}</a>
+        <a href="{% url 'ceo-info' %}">{% trans 'Руководитель' %}</a>
+        <a href="{% url 'vacancies'%}">{% trans 'Вакансии' %}</a>
+        <a href="{% url 'orgStruct'%}">{% trans 'Организационная структура' %}</a>
+        <a href="{% url 'reviews'%}">{% trans 'Отзывы' %}</a>
+        <a href="{% url 'contacts'%}">{% trans 'Контакты' %}</a>
+        <a href="{% url 'rights-acts'%}">{% trans 'Правовые акты' %}</a>
+        <a href="{% url 'workers-info'%}" class = "selected">{% trans 'Сведения о работниках' %}</a>
+        <a href="{% url 'antiCor'%}">{% trans 'Противодействие коррупции' %}</a>
+        <a href="{% url 'ads'%}">{% trans 'Протокол итогов' %}</a>
+    </div>
+    <div class="rules">
+        <span class="Title">{%trans 'Сведения о квалификации медицинских работников'%} с высшим медицинским образованием</span>
+        
+        <div class="rule-plates">
+            <table >
+                <tr>
+                    <th>{% trans 'ФИО' %}</th> <th>{% trans 'Должность' %}</th> <th>{%trans 'Стаж'%}</th> <th>{%trans 'Сертификат специалиста'%}</th>
+                </tr>
+                {% for worker in workers %}
+                    <tr>
+                        <td>{{worker.name}}</td> <td>{{worker.post}}</td> <td>{{worker.work_exp}}</td> <td>
+                            {%for serts in worker.sertificates%}
+                                {{serts}}
+                            {%endfor%}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+    </div>
+    
+</div> 
+{% endblock %}

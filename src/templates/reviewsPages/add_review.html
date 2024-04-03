@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%load i18n%}
+{% block content %}
+<div class="form-card">
+    <form method="post" class="login-card">
+        {% csrf_token %}
+        <label for="id_author">{%trans 'Ваше имя'%}:</label>
+        {{ form.author }}
+        <label for="id_IIN">{%trans 'ИИН'%}:</label>
+        {{ form.IIN }}
+        <label for="id_review">{%trans 'Ваш отзыв'%}:</label>
+        {{ form.review }}
+        
+        <button class="btn" type="submit">{%trans 'Отправить отзыв'%}</button>
+    </form>
+</div>
+{% endblock %}

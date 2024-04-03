@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{%load i18n%}
+{% block content %}
+<div class="form-card">
+    <h1>{%trans 'Восстановление пароля'%}</h1>
+    <form action="" class="login-card">
+        <p>{%trans 'Введите адрес Вашей электронной почты'%}:</p>
+        <input id="email" type="text" placeholder="E-mail">
+        <span class="form-inputs">
+            <button class="btn">{%trans 'Восстановить'%}</button>
+            <a href="login.html">{%trans 'Войти'%}</a>
+        </span>
+    </form>
+</div>
+<script src="../static/script.js"></script>
+{% endblock %}

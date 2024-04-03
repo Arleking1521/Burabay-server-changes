@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<div class="form-card">
+    <h1>{%trans 'Войти в систему'%}</h1>
+    <form action="" class="login-card" method="POST">
+        {% csrf_token %} 
+        {{ form.email }}
+        <span class="password">
+            {{ form.password }}
+            <a href="#" class="password-control" id="pi" onclick="return show_hide_password(this);"></a>
+        </span> 
+        <span class="form-inputs">
+            <button class="btn" type="submit">{%trans 'Войти'%}</button>
+            <a href="{% url 'password_reset' %}">{%trans 'Забыли пароль'%}?</a>
+	    <a href="{% url 'registr' %}" > {%trans 'Регистрация'%} </a>
+        </span>
+    </form>
+</div>
+<script src="../../static/script.js"></script>
+{% endblock %}

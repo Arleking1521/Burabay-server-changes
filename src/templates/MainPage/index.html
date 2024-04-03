@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{%load i18n%}
+{% block content %}
+    <div class="banner">
+        <div class="back-img">
+            <p class="banner-content">{%trans 'РГП на ПХВ  «Научно-исследовательский институт курортологии и медицинской реабилитации» МЗ РК'%}</p>
+            <p class="banner-text">{{content.bannerContent}}</p>
+            <a href="{% url 'about' %}" class="btn3"> {%trans 'Читать Больше'%}...</a>
+        </div>
+    </div>
+    <div class="question-block">
+        <div class="question-inner">
+            <div class="info">
+                <p class="header">{%trans 'Руководитель'%}</p>
+                <p class="header2">{{ceo.name}}</p>
+                <p class="phrase">{{content.ceo_appeal}}<br>
+                    {%trans 'С уважением'%}, {{ceo.name}}.
+                </p>
+                <div class="photo-2">
+                    <img src="../static{{ceo.photo}}" alt="">
+                </div>
+                <a href="{% url 'add-review' %}" class="btn">{%trans 'Оставить Обращение'%}</a>
+                <a href="{% url 'reviews' %}" class="btn2 mg-l">{%trans 'Посмотреть Обращения'%}</a>
+            </div>
+            <div class="photo">
+                <img src="../static/assets/ceo.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+ 
+    <div class="small-banners">
+        <a href="{% url 'symbols' %}" class="sm-banner">
+            <div><p>{%trans 'Государственные символы'%}</p></div>
+            <img src="../static/assets/banner-1.jpg" alt="">
+        </a>
+        <div class="swiper sw1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><a href="https://diakom.gov.kz/ru" class="slider-content"><img src="../static/assets/107.jpg" alt=""></a></div>
+              <div class="swiper-slide"><a href="http://adilet.zan.kz/" class="slider-content"><img src="../static/assets/adlet.jpg" alt=""></a></div>
+              <div class="swiper-slide"><a href="http://www.akorda.kz/ru" class="slider-content"><img src="../static/assets/b1.jpg" alt=""></a></div>
+              <div class="swiper-slide"><a href="http://egov.kz/cms/ru" class="slider-content"><img src="../static/assets/b3-1.jpg" alt=""></a></div>
+              <div class="swiper-slide"><a href="https://primeminister.kz/" class="slider-content"><img src="../static/assets/b3.jpg" alt=""></a></div>
+              <div class="swiper-slide"><a href="http://parlam.kz/" class="slider-content"><img src="../static/assets/b4.jpg" alt=""></a></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- If we need navigation buttons -->
+          </div>
+        
+        <a href="{% url 'messages' %}" class="sm-banner">
+            <div><p>{%trans 'Послание Главы государства Касым-Жомарта Токаева народу Казахстана'%}</p></div>
+            <img src="../static/assets/banner-2.jpg" alt="">
+        </a>
+    </div>
+    <div class="astana-banner">
+        <div class="swiper sw">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><a target="_blank" href="https://www.gov.kz/memleket/entities/dsm/press/events/details/25580?lang=kk"><img src="../static/assets/banner1.png" alt=""></a></div>
+              <div class="swiper-slide"><a target="_blank" href="https://www.gov.kz/memleket/entities/anticorruption?lang=kk"><img src="../static/assets/banner2.jpg" alt=""></a></div>
+              <div class="swiper-slide"><a target="_blank" href="https://fms.kz/kz/useful-to-know/kak-lechitsia-za-rubezhom/"><img src="../static/assets/banner3.jpg" alt=""></a></div>
+              <div class="swiper-slide"><span><img src="../static/assets/banner4.jpg" alt=""><span></div>
+              <div class="swiper-slide"><a target="_blank" href="https://www.gov.kz/memleket/entities/vss/activities/424?lang=kk"><img src="../static/assets/banner5.jpg" alt=""></a></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination pag"></div>
+            <!-- If we need navigation buttons -->
+          </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../static/script.js"></script>
+{% endblock %}
