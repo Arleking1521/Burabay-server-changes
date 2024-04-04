@@ -13,17 +13,17 @@
             <div class="info">
                 <p class="header">{%trans 'Руководитель'%}</p>
                 <p class="header2">{{ceo.name}}</p>
+                <div class="photo-2">
+                    <img src="../media/{{ceo.photo}}" alt="">
+                </div>
                 <p class="phrase">{{content.ceo_appeal}}<br>
                     {%trans 'С уважением'%}, {{ceo.name}}.
                 </p>
-                <div class="photo-2">
-                    <img src="../static{{ceo.photo}}" alt="">
-                </div>
                 <a href="{% url 'add-review' %}" class="btn">{%trans 'Оставить Обращение'%}</a>
                 <a href="{% url 'reviews' %}" class="btn2 mg-l">{%trans 'Посмотреть Обращения'%}</a>
             </div>
             <div class="photo">
-                <img src="../static/assets/ceo.jpeg" alt="">
+                <img src="../media/{{ceo.photo}}" alt="">
             </div>
         </div>
     </div>

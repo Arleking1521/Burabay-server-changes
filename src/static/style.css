@@ -1126,6 +1126,8 @@ width: 30%;
     margin: 20px 0;
   }
 
+  
+
   .ceo-info span{
     margin: 0 25px;
   }
@@ -1139,6 +1141,17 @@ width: 30%;
   }
 
   .lang-mobile{
+    display: none;
+  }
+
+  .pass-mobile{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: end !important;
+    justify-content: center !important;
+  }
+
+  .reg-mob{
     display: none;
   }
 
@@ -1287,11 +1300,16 @@ width: 30%;
         grid-template-columns: 45% auto 45%;
     }
     .lang-mobile{
+        display: block;
         position: fixed;
         bottom: 20px;
         right: 20px;
         z-index: 2;
     }
+
+    .reg-mob{
+        display: block;
+      }
     
     .lang-mobile button{
         background: linear-gradient(45deg, var(--main-color1), var(--main-color2));
@@ -1310,6 +1328,7 @@ width: 30%;
     .lang-mobile button:disabled{
         background: lightgray;
         color: gray;
+        display: none;
     }
     
     .lang-mob-inner{
@@ -1373,10 +1392,10 @@ width: 30%;
         flex-direction: column;
     }
     .sm-banner{
-        width: 90%;
+        width: 100%;
     }
     .sw1{
-        width: 90%;
+        width: 100%;
         margin: 20px;
     }
     .slider-content{
@@ -1445,6 +1464,12 @@ width: 30%;
     }
     .ceo-info span h2{
         font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width:1440px){
+    header{
+        grid-template-columns: 48% auto 48%;
     }
   }
   
