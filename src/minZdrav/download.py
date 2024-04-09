@@ -7,7 +7,7 @@ def download_file(request, file_name):
     if os.path.exists(file_path):
         with open(file_path, 'rb') as f:
             response = HttpResponse(f.read(), content_type='application/octet-stream')
-            response['Content-Disposition'] = f'attachment; filename="{file_name}"'
+            response['Content-Disposition'] = f'attachment; filename="{file_path}"'
             return response
     else:
         return HttpResponse("File not found", status=404)
