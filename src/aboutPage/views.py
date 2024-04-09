@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from .models import AboutInfo
-from django.views.decorators.clickjacking import xframe_options_deny
-from django.views.decorators.clickjacking import xframe_options_sameorigin
+from django.views.decorators.clickjacking import xframe_options_exempt
 # Create your views here.
-@xframe_options_sameorigin
+@xframe_options_exempt
 def aboutInfo(request):
     datas = AboutInfo.objects.order_by('-id').first()
     data_part={
