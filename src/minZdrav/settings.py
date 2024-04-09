@@ -29,6 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', 'burabay-test.kz']
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 
 # Application definition
 
