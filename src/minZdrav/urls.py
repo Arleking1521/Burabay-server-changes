@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from news.views import post_new
 from django.conf.urls.i18n import i18n_patterns
+from download import download_file
 
 
 urlpatterns = [
@@ -40,7 +41,7 @@ urlpatterns += i18n_patterns(
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', CustomPasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
-
+    path('download/<str:file_name>/', download_file, name='download_file'),
     path('activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', activate, name='activate'),
 )
 
