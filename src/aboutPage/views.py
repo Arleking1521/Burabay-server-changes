@@ -4,8 +4,6 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 
 # Create your views here.
 
-@xframe_options_exempt
-
 def aboutInfo(request):
     datas = AboutInfo.objects.order_by('-id').first()
     data_part={
