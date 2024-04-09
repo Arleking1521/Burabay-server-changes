@@ -7,10 +7,9 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from news.views import post_new
 from django.conf.urls.i18n import i18n_patterns
-from .download import download_file
 
 
-urlpatterns = [
+urlpatterns = [dfgf
     path('admin/', admin.site.urls),
     path('',include('static_pages.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
