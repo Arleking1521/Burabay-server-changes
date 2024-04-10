@@ -78,8 +78,10 @@ body{
 header{
     position: fixed;
     padding: 10px 10% 10px 10%;
-    display: grid;
-    grid-template-columns: 47% auto 47%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid lightgray;
     background-color: white;
     width: 80%;
@@ -168,10 +170,18 @@ li{
     color: white;
 }
 
+.logo-desk{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 7%;
+}
+
 .logo{
     display: flex;
     align-items: center;
     justify-content:center;
+    display: none;
 }
 
 .logo img{
@@ -1161,6 +1171,14 @@ width: 30%;
         display: none;
     }
 
+    .logo{
+        display: block;
+    }
+
+    .logo-desk{
+        display: none;
+    }
+
     .site-map-button{
         display: flex;
         align-items: center;
@@ -1182,6 +1200,7 @@ width: 30%;
     }
 
     header{
+        display: grid;
         grid-template-columns: 46% auto 46%;
     } 
     .form-card{
