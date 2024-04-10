@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render
 from .models import Ads, Files
 from django.http import HttpResponse
@@ -12,6 +13,7 @@ def ads(request):
 
 def download_file(request, file_id):
     file_obj = get_object_or_404(Files, pk=file_id)
+    file_name = os.path.basename(file_obj.file.file.name)
     response = HttpResponse(file_obj.file, content_type='application/octet-stream')
-    response['Content-Disposition'] = f'attachment; filename="{file_obj.name}.docx"'
+    response['Content-Disposition'] = f'attachment; filename="{file_name}"'
     return response
