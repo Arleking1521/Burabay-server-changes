@@ -1206,7 +1206,7 @@ width: 30%;
 
     header{
         display: grid;
-        grid-template-columns: 46% auto 46%;
+        grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
     } 
     .form-card{
         width: 50%;
@@ -1309,7 +1309,7 @@ width: 30%;
         width: 70%;
     }
     header{
-        grid-template-columns: 45% auto 45%;
+        grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
     }
     .form-card{
         width: 60%;
@@ -1319,9 +1319,6 @@ width: 30%;
     }
     .registration-btn-header{
         display: none;
-    }
-    header{
-        grid-template-columns: 45% auto 45%;
     }
     .lang-mobile{
         display: block;
@@ -1468,7 +1465,7 @@ width: 30%;
         width: 10%;
     }
     header{
-        grid-template-columns: 42% auto 42%;
+        grid-template-columns: calc(50% - 40px) 80px calc(50% - 40px);
     }
     .Title{
         font-size: 30px;
@@ -1488,12 +1485,6 @@ width: 30%;
     }
     .ceo-info span h2{
         font-size: 20px;
-    }
-  }
-
-  @media screen and (min-width:1440px){
-    header{
-        grid-template-columns: 48% auto 48%;
     }
   }
   
