@@ -189,6 +189,11 @@ li{
     display: block;
 }
 
+.logo-desk img{
+    width: 100%;
+    display: block;
+}
+
 
 .menu a{
     margin: 5px 25px 5px 0px;
