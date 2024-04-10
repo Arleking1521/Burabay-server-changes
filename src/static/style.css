@@ -58,14 +58,6 @@ a:hover{
     color: rgba(0, 0, 0, 0.2) !important;
 }
 
-.sub-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
-}
-
 .slider-content{
     width: 100%;
     align-items: center;
@@ -83,7 +75,7 @@ body{
     font-family: "Nunito Sans", sans-serif;
     margin: 0;
 }
-.main-header{
+header{
     position: fixed;
     padding: 10px 10% 10px 10%;
     display: flex;
@@ -1212,7 +1204,7 @@ width: 30%;
         justify-content: center;
     }
 
-    .main-header{
+    header{
         display: grid;
         grid-template-columns: calc(50% - 33px) 66px calc(50% - 33px);
     } 
@@ -1236,7 +1228,7 @@ width: 30%;
     .map-button{
         width: 25%;
     }
-    .main-header{
+    header{
         padding: 10px 5%;
         width: 90%;
     }
