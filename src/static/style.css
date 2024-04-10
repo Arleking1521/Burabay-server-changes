@@ -26,8 +26,8 @@
     --swiper-pagination-bullet-vertical-gap: 6px;
     --swiper-navigation-size: 10px;
     --swiper-navigation-top-offset: 50%;
-    --swiper-navigation-sides-offset: 10px;
-    --swiper-navigation-color: transparent;
+    --swiper-navigation-sides-offset: 0px;
+    --swiper-navigation-color: rgba(0,0,0, 0.1);
     --swiper-navigation-size:10px;
 }
 
@@ -41,7 +41,7 @@ a:hover{
 }
 
 .sw1{
-    width: 33%;
+    width: calc(30% + 16px);
 }
 
 .swiper-button-next:after, .swiper-button-prev:after{
